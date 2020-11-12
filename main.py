@@ -1,14 +1,17 @@
-import click
 from pathlib import Path
+
+import click
+
 
 class Config:
     def __init__(self):
         pass
-        
+
+
 pass_config = click.make_pass_decorator(
-        Config,  # Class whose instance will be passed around
-        ensure=True  # causes an instance to be created upon first usage
-        )
+    Config,  # Class whose instance will be passed around
+    ensure=True  # causes an instance to be created upon first usage
+)
 
 
 @click.group()
